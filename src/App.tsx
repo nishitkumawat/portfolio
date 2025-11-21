@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Mail, Phone, ArrowDownToLine, Server, Layers, Database, Code2, Home, Info, Sparkles, FolderGit2 } from "lucide-react";
+import { Github, Mail, Phone, ArrowDownToLine, Server, Layers, Database, Code2, Home, Info, Sparkles, FolderGit2, Linkedin } from "lucide-react";
 import { GlowingEffectDemo, DeployedProjectsGrid } from "@/components/ui/glowing-effect-demo";
 import { Card, CardContent } from "@/components/ui/card";
 import { SplineSceneBasic } from "@/components/ui/spline-scene-demo";
@@ -261,6 +261,14 @@ const App = () => {
                   className="inline-flex items-center gap-2 text-slate-300 hover:text-sky-400"
                 >
                   <Github className="h-4 w-4" /> github.com/nishitkumawat
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nishit-kumawat-b868802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-slate-300 hover:text-sky-400"
+                >
+                  <Linkedin className="h-4 w-4" /> linkedin.com/in/nishit-kumawat-b868802a5
                 </a>
               </div>
             </div>

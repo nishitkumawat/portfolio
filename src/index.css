@@ -12,6 +12,25 @@ body {
   color: #e5e7eb;
 }
 
+/* Global blue scrollbar - desktop & mobile */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3ca2fa #020617;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #3ca2fa;
+  border-radius: 9999px;
+}
+
 .loader {
   width: 32px;
   height: 32px;

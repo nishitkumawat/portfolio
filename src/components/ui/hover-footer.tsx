@@ -11,6 +11,7 @@ import {
   Twitter,
   Dribbble,
   Globe,
+  Linkedin,
 } from "lucide-react";
 
 export const TextHoverEffect = ({
@@ -146,6 +147,11 @@ export function HoverFooter() {
       title: "Helpful Links",
       links: [
         { label: "GitHub", href: "https://github.com/nishitkumawat" },
+        {
+          label: "LinkedIn",
+          href:
+            "https://www.linkedin.com/in/nishit-kumawat-b868802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        },
         { label: "Contact", href: "#contact" },
         {
           label: "Open to opportunities",
@@ -171,6 +177,12 @@ export function HoverFooter() {
       icon: <MapPin size={18} className="text-[#3ca2fa]" />,
       text: "Ahmedabad, India",
     },
+    {
+      icon: <Linkedin size={18} className="text-[#3ca2fa]" />,
+      text: "LinkedIn Profile",
+      href:
+        "https://www.linkedin.com/in/nishit-kumawat-b868802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ];
 
   const socialLinks = [
@@ -178,6 +190,12 @@ export function HoverFooter() {
     { icon: <Instagram size={20} />, label: "Instagram", href: "#" },
     { icon: <Twitter size={20} />, label: "Twitter", href: "#" },
     { icon: <Dribbble size={20} />, label: "Dribbble", href: "#" },
+    {
+      icon: <Linkedin size={20} />,
+      label: "LinkedIn",
+      href:
+        "https://www.linkedin.com/in/nishit-kumawat-b868802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
     { icon: <Globe size={20} />, label: "Portfolio", href: "#hero" },
   ];
 
