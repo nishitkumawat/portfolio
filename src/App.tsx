@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Github, Mail, Phone, ArrowDownToLine, Server, Layers, Database, Code2, Home, Info, Sparkles, FolderGit2, Linkedin } from "lucide-react";
 import { GlowingEffectDemo, DeployedProjectsGrid } from "@/components/ui/glowing-effect-demo";
@@ -7,6 +7,7 @@ import { SplineSceneBasic } from "@/components/ui/spline-scene-demo";
 import { HoverSpotlight } from "@/components/ui/spotlight-ibelick";
 import { AnimeNavBar } from "@/components/ui/anime-navbar";
 import { HoverFooter } from "@/components/ui/hover-footer";
+import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -23,9 +24,20 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-slate-950 to-black text-slate-100">
-      <AnimeNavBar items={navItems} defaultActive="Home" />
-      <main className="mx-auto flex max-w-6xl flex-col gap-32 pb-24 pt-32 md:pt-28">
+    <div className="min-h-screen bg-black text-slate-100 relative">
+      {/* Fixed Geometric background */}
+      <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
+        <HeroGeometric 
+          title1="Nishit" 
+          title2="Kumawat" 
+          badge="Portfolio"
+          children={<div className="h-full w-full" />} // Empty child to just get background
+        />
+      </div>
+
+      <div className="relative z-[2]">
+        <AnimeNavBar items={navItems} defaultActive="Home" />
+        <main className="mx-auto flex max-w-6xl flex-col gap-32 pb-24 pt-32 md:pt-28">
         {/* Hero - use shadcn SplineSceneBasic layout */}
         <motion.section
           id="hero"
@@ -67,7 +79,7 @@ const App = () => {
               <div className="space-y-1">
                 <p className="text-xs uppercase tracking-[0.18em] text-sky-400">Quick info</p>
                 <p className="text-sm text-slate-300">
-                  5th semester · LJ Institute of Engineering and Technology · Ahmedabad, India
+                  6th semester · LJ Institute of Engineering and Technology · Ahmedabad, India
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm text-slate-200">
@@ -275,7 +287,8 @@ const App = () => {
           </div>
         </motion.section>
       </main>
-      <HoverFooter />
+        <HoverFooter />
+      </div>
     </div>
   );
 };
